@@ -6,7 +6,7 @@
     "predev": "node ./lib/demo.mjs",
     "dev": "next dev",
     "prebuild": "node ./lib/demo.mjs",
-    "build": "pnpm build:next && pnpm build:storybook",
+    "build": "pnpm build:storybook && pnpm build:next",
     "build:next": "next build",
     "build:storybook": "storybook build -o public/storybook",
     "start": "next start",
