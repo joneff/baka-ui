@@ -7,11 +7,11 @@ import { stateClassNames, variantClassNames } from "../../utils";
 export type BakaIconProps = BakaStates<BakaDesign["IconState"]> &
   BakaVariant<BakaDesign["IconVariant"]> & {};
 
-export type BakaIcon = PolymorphicComponent<"ul", BakaIconProps>;
+export type BakaIcon = PolymorphicComponent<"i", BakaIconProps>;
 export const BakaIcon: BakaIcon = (props) => {
   const {
     _ref,
-    as: Component = "ul",
+    as: Component = "i",
     variant,
     selected,
     checked,

@@ -15,7 +15,7 @@ export type SidenavProps = {
 export const Sidenav = (props: SidenavProps) => {
   return (
     <SidenavClient>
-      <Column variant={"region-left"} className="sticky top-0 h-[100vh] z-40 md:flex">
+      <Column variant={"region-left"} className="fixed sm:sticky top-0 h-[100vh] z-40 md:flex">
         <SidenavCategory data={props.data} />
         <SidenavSubcategory data={props.data} />
       </Column>

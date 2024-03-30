@@ -3,8 +3,6 @@
 
 @mixin container--styles {
   .baka-container {
-    @include baka.container--styles;
-    @include baka.container--styles();
 
     @each $size, $breakpoint in $layout {
       $_gutter: map-get($breakpoint, gutter);

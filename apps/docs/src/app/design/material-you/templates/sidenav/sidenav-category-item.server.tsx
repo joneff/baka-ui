@@ -4,6 +4,7 @@ import { Text } from "@/components/text";
 import { SidenavCategoryItemClient } from "./sidenav-category-item.client";
 
 export type SidenavCategoryItemProps = NavigationItemProps & {
+  as?: any;
   url: string;
   icon: JSX.Element;
   title: string;
@@ -12,11 +13,11 @@ export type SidenavCategoryItemProps = NavigationItemProps & {
 };
 
 export const SidenavCategoryItem = (props: SidenavCategoryItemProps) => {
-  const { url, icon, title, readOnly, match, ...other } = props;
+  const { as: Component, url, icon, title, readOnly, match, ...other } = props;
 
   return (
     <SidenavCategoryItemClient url={url} title={title} match={match} readOnly={readOnly}>
-      <NavigationItem>
+      <NavigationItem as={Component} {...other}>
         <Icon>{icon}</Icon>
         <Text variant="label-medium">{title}</Text>
       </NavigationItem>

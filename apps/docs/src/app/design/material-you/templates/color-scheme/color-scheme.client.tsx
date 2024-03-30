@@ -10,7 +10,9 @@ export type ColorSchemeProps = {
 export const ThemeContext = React.createContext<[string | null, Function]>([null, () => {}]);
 
 export const ColorScheme = (props: ColorSchemeProps) => {
-  const [theme, setTheme] = React.useState<string | null>(null);
+  const [theme, setTheme] = React.useState<string | null>(
+    typeof window !== "undefined" ? window.localStorage.getItem("baka-theme") : null
+  );
 
   React.useLayoutEffect(() => {
     if (theme) {

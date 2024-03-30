@@ -4,6 +4,7 @@
 @mixin navigation--styles {
   .baka-navigation {
     @include baka.navigation--styles;
+    scrollbar-width: none;
 
     @include baka.variant(bottom) {
       align-items: center;
