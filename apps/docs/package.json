@@ -6,11 +6,12 @@
     "predev": "node ./lib/demo.mjs",
     "dev": "next dev",
     "prebuild": "node ./lib/demo.mjs",
-    "build": "next build",
+    "build": "build:next && build:storybook",
+    "build:next": "next build",
+    "build:storybook": "storybook build -o public/storybook",
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006 --no-open",
-    "build-storybook": "storybook build",
     "serve-storybook": "serve storybook-static"
   },
   "dependencies": {

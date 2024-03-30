@@ -4,6 +4,15 @@ const withMDX = require("@next/mdx")();
 
 const nextConfig = withContentlayer(
   withMDX({
+    redirects: async () => {
+      return [
+        {
+          permanent: true,
+          source: "/storybook",
+          destination: "/storybook/index.html",
+        },
+      ];
+    },
     webpack: (config) => {
       config.module.rules.push({
         test: /\.inline-svg$/,
