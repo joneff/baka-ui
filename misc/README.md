@@ -31,6 +31,62 @@ import "baka-material-you/dist/index.css";
 const App = () => <BakaButton>Click me</BakaButton>;
 ```
 
+## Features
+
+BakaUI embraces a `Less is more` philosophy. It provides a set of design system primitives which can be used to build complex UIs by following simple guidelines. Here are some of the features of `baka-ui` you can utilize to build your Design System.
+
+### Composable
+
+UI is composed from multiple atomic components to achieve more-complex designs.
+
+```tsx
+<BakaTextField>
+  <BakaLabel>Label</BakaLabel>
+  <BakaInput />
+  <BakaButton>
+    <BakaIcon>search</BakaIcon>
+  </BakaButton>
+</BakaTextField>
+```
+
+### Theming
+
+Change the appearance of the components using themes & swatches by utilizing css & scss variables.
+
+```scss
+@use "baka-material-you" as material-you;
+@use "baka-material-you/themes/dark" as dark-swatch;
+
+:root {
+  @include materila-you.styles();
+
+  @media screen and (prefers-color-scheme: dark) {
+    @include dark-swatch.design-styles();
+  }
+}
+```
+
+### Tailwind Integration
+
+BakaUI semlessly integrates with TailwindCSS by providing a [preset](https://tailwindcss.com/docs/presets) which can be used to extend the default TailwindCSS configuration and provide costitent look & feel between component-level & layout styles.
+
+```js
+// tailwind.config.js
+module.exports = {
+  // ...
+  presets: [require("baka-material-you/tailwind")],
+};
+```
+
+### Typescript Support
+
+Apply contextual typings according to your design system.
+
+```tsx
+// The `variant` prop is typed according to the design system in use
+<BakaButton variant={["filled", "icon"]}>Click me</BakaButton>
+```
+
 ## Principles
 
 The `baka-ui` is built on top of basic design system principles which are followed strictly.
