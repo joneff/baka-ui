@@ -25,10 +25,8 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Basic: Story = {
   args: {
-    // @ts-expect-error - `primary` is the default value
     variant: "primary",
     checked: true,
     indeterminate: false,

@@ -36,7 +36,7 @@ export interface BakaDesignMaterialYou extends BakaDesignCore {
     activated?: boolean;
     disabled?: boolean;
   };
-  CheckboxVariant: "error";
+  CheckboxVariant: "primary" | "error";
   BottomSheetVariant: "modal";
   ChipVariant: "elevated";
   CardVariant: "outlined" | "elevated" | "filled" | "horizontal";
