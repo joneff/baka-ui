@@ -78,6 +78,9 @@ export interface BakaDesignMaterialYou extends BakaDesignCore {
     invalid?: boolean;
   };
   TextFieldVariant: "filled" | "outlined" | "search";
+  InputState: {
+    empty?: boolean;
+  };
   TabGroupVariant: "primary" | "secondary" | "overflow";
   TabState: {
     selected?: boolean;

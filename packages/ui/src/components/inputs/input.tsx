@@ -33,6 +33,7 @@ export const BakaInput: BakaInput = (props) => {
       ref={_ref}
       {...other}
       disabled={disabled}
+      readOnly={readOnly}
       className={clsx(
         "baka-input",
         props.className,
