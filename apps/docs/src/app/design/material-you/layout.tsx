@@ -12,7 +12,8 @@ export const metadata: Metadata = {
   description: "A React Implementation of the Material You Design System",
 };
 
-import Logo from "@/icons/logo-material-you.svg";
+// @ts-expect-error
+import Logo from "@/icons/logo-material-you.inline-svg";
 // @ts-expect-error
 import GitHub from "@/icons/github-mark.inline-svg";
 import NPM from "@/icons/npm-logo.svg";
@@ -65,7 +66,7 @@ export default function MaterialYouLayout({ children }: { children: React.ReactN
 
   return (
     <ColorScheme>
-      <html lang="en" className={clsx(styles["material-you"])}>
+      <html lang="en" className={clsx(styles["material-you"])} suppressHydrationWarning={true}>
         <head>
           <link rel="icon" href={favicon.src} />
           <link href="https://fonts.googleapis.com" rel="preconnect" />
@@ -76,54 +77,59 @@ export default function MaterialYouLayout({ children }: { children: React.ReactN
           ></link>
         </head>
         <body className={clsx(roboto.variable, robotoMono.variable)} id="material-you">
-          <main className="min-h-[calc(100vh-60px)] flex flex-row">
+          <main className="flex flex-row">
             <SidenavState data={groups}>
               <Sidenav data={groups} />
               <Container>
-                <Row as={TopBar} className={"sticky top-0 z-30 min-h-[72px] "}>
-                  <Column
-                    count={[4, 6, 10, 8, 8]}
-                    className="items-center gap-3 md:gap-0 justify-between relative"
-                  >
-                    <div className="flex items-center gap-3 ">
-                      <ToggleButton className="sm:hidden">
-                        <Icon />
-                      </ToggleButton>
-                      <Image
-                        src={Logo}
-                        alt="Baka UI"
-                        className="h-[30px] w-auto sm:hidden"
-                        width={400}
-                        height={33}
-                      />
-                    </div>
-                    <Search />
-                  </Column>
-                  <Column count={[null, 2, 2, 4, 4]} className="gap-2 hidden sm:flex">
-                    <Button
-                      variant={"icon"}
-                      as={Link}
-                      href={"https://github.com/kspeyanski/baka"}
-                      target={"_blank"}
-                    >
-                      <Icon>
-                        <GitHub height={32} width={32} />
-                        {/* <Image src={GitHub} alt="GitHub" width={32} height={32} /> */}
-                      </Icon>
-                    </Button>
-                    <Button
-                      variant={"icon"}
-                      as={Link}
-                      href="https://www.npmjs.com/package/baka-ui"
-                      target={"_blank"}
-                    >
-                      <Icon>
-                        <Image src={NPM} alt="NPM" width={32} height={32} />
-                      </Icon>
-                    </Button>
-                  </Column>
-                </Row>
-                <Row className="relative">{children}</Row>
+                <TopBar className={"z-30 sticky top-0"}>
+                  <div className="flex flex-col grow">
+                    <Row className={"min-h-[72px] items-center"}>
+                      <Column
+                        count={[4, 6, 10, 8, 8]}
+                        className="items-center gap-3 sm:gap-0 justify-between relative"
+                      >
+                        <div className="flex items-center gap-3 ">
+                          <ToggleButton className="sm:hidden">
+                            <Icon />
+                          </ToggleButton>
+                          <Logo className="h-[30px] w-auto sm:hidden" height={33} />
+                          {/* <Image
+                            src={Logo}
+                            alt="Baka UI"
+                            className="h-[30px] w-auto sm:hidden"
+                            width={400}
+                            height={33}
+                          /> */}
+                        </div>
+                        <Search />
+                      </Column>
+                      <Column count={[null, 2, 2, 4, 4]} className="gap-2 hidden md:flex">
+                        <Button
+                          variant={"icon"}
+                          as={Link}
+                          href={"https://github.com/kspeyanski/baka"}
+                          target={"_blank"}
+                        >
+                          <Icon>
+                            <GitHub height={32} width={32} />
+                            {/* <Image src={GitHub} alt="GitHub" width={32} height={32} /> */}
+                          </Icon>
+                        </Button>
+                        <Button
+                          variant={"icon"}
+                          as={Link}
+                          href="https://www.npmjs.com/package/baka-ui"
+                          target={"_blank"}
+                        >
+                          <Icon>
+                            <Image src={NPM} alt="NPM" width={32} height={32} />
+                          </Icon>
+                        </Button>
+                      </Column>
+                    </Row>
+                  </div>
+                </TopBar>
+                <Row className="relative h-[calc(100%-88px)]">{children}</Row>
               </Container>
             </SidenavState>
           </main>

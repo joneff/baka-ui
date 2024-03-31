@@ -1,4 +1,6 @@
-export interface BakaDesignMaterialYou {
+import { BakaDesignCore } from "baka-core/types";
+
+export interface BakaDesignMaterialYou extends BakaDesignCore {
   AvatarVariant: "small" | "medium" | "large";
   BadgeVariant: "small" | "single-digit" | "multi-digit";
   BarVariant: "top" | "bottom" | "small" | "medium" | "large" | "elevated";
@@ -34,8 +36,15 @@ export interface BakaDesignMaterialYou {
     activated?: boolean;
     disabled?: boolean;
   };
-  CheckboxVariant: "error";
+  CheckboxVariant: "primary" | "error";
   BottomSheetVariant: "modal";
+  ChipState: {
+    hovered?: boolean;
+    focused?: boolean;
+    activated?: boolean;
+    dragged?: boolean;
+    selected?: boolean;
+  };
   ChipVariant: "elevated";
   CardVariant: "outlined" | "elevated" | "filled" | "horizontal";
   DialogVariant: "basic" | "full-screen";
@@ -46,6 +55,7 @@ export interface BakaDesignMaterialYou {
     | "headline-large"
     | "headline-medium"
     | "headline-small"
+    | "title-large"
     | "title-medium"
     | "title-small"
     | "label-large"
@@ -68,6 +78,9 @@ export interface BakaDesignMaterialYou {
     invalid?: boolean;
   };
   TextFieldVariant: "filled" | "outlined" | "search";
+  InputState: {
+    empty?: boolean;
+  };
   TabGroupVariant: "primary" | "secondary" | "overflow";
   TabState: {
     selected?: boolean;

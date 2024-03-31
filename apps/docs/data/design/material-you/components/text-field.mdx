@@ -1,0 +1,57 @@
+---
+title: Text Field
+---
+
+# Text Field
+
+The TextField component is a text input field that allows users to enter text, guided by a label, placeholder or invalid state hint.
+
+<Demo src="/demos/material-you/text-field/" />
+
+## Variants
+
+The TextField component has two variants: `filled` and `outlined`.
+
+### Filled
+
+The filled variant is the default variant for the TextField component. It is a solid field with a label and placeholder.
+
+```tsx
+<BakaTextField>
+  <BakaIcon>search</BakaIcon>
+  <BakaLabel>Label</BakaLabel>
+  <BakaInput />
+  <BakaButton>
+    <BakaIcon>clear</BakaIcon>
+  </BakaButton>
+</BakaTextField>
+```
+
+<Demo src="/demos/material-you/text-field/filled/" style={{ height: 500 }} />
+
+### Outlined
+
+The outlined variant is a field with a border and a label that is placed outside the field.
+
+```tsx
+<BakaTextField variant="outlined">
+  <BakaIcon>search</BakaIcon>
+  <BakaLabel>Label</BakaLabel>
+  <BakaInput />
+  <BakaButton>
+    <BakaIcon>clear</BakaIcon>
+  </BakaButton>
+</BakaTextField>
+```
+
+<Demo src="/demos/material-you/text-field/outlined/" style={{ height: 450 }} />
+
+### States
+
+The TextField component has multiples states:
+
+- `hovered`: when the pointer is over the field.
+- `focused`: when the field is focused.
+- `activated`: when the field is activated.
+- `disabled`: when the field is disabled.
+- `invalid`: when the field has an invalid value.

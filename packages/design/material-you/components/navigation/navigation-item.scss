@@ -84,6 +84,8 @@
       --state: #{map-get($swatch, on-surface)};
       --vertical-padding: 16px;
 
+      box-sizing: border-box;
+      max-width: 100%;
       cursor: pointer;
       display: flex;
       flex-grow: 1;
@@ -170,13 +172,15 @@
 
       color: var(--color);
 
-      .baka-text,
       .baka-text {
         color: inherit;
+        &:nth-of-type(1) {
+          flex-grow: 1;
+        }
       }
 
-      .baka-text {
-        flex-grow: 1;
+      .baka-icon {
+        flex-grow: 0;
       }
 
       @include state-layer {

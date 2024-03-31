@@ -6,7 +6,7 @@ export const ThemeToggle = () => {
   return (
     <ThemeToggleClient>
       <Button variant={["icon", "outlined"]}>
-        <Icon>dark_mode</Icon>
+        <Icon suppressHydrationWarning={true}>dark_mode</Icon>
       </Button>
     </ThemeToggleClient>
   );

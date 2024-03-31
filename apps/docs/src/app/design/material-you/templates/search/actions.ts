@@ -23,7 +23,6 @@ const index = new flexsearch.Document({
 });
 
 const docs = allDocs.map((doc) => {
-  console.log(doc.group);
   index.add(doc._raw.flattenedPath, {
     slug: doc._raw.flattenedPath,
     title: doc.title,

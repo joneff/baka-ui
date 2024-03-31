@@ -12,5 +12,8 @@
         "opsz",
         "srgb",
         "wght"
-    ]
+    ],
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    }
 }

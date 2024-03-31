@@ -1,0 +1,9 @@
+@use "@design/katana" as *;
+
+.wip-feature {
+  border-width: 1px;
+  border-style: dashed;
+  border-color: map-get($swatch, brand);
+  border-radius: 4px;
+  text-decoration: line-through;
+}

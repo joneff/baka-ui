@@ -61,15 +61,6 @@ export default function MaterialYouPage(props: { params?: { slug?: string[] } })
     (doc) => doc._raw.flattenedPath === "design/material-you" + (slug ? `/${slug}` : "")
   );
 
-  console.log(
-    allDocs
-      .filter((doc) => doc._raw.flattenedPath.startsWith("design/material-you"))
-      .map((doc) => {
-        return { slug: doc._raw.flattenedPath.split("/") };
-      }),
-    doc
-  );
-
   if (!doc) {
     notFound();
   }
@@ -79,7 +70,7 @@ export default function MaterialYouPage(props: { params?: { slug?: string[] } })
   return (
     <>
       <Column count={[8, 9, 10]} className="pt-[45px]  pb-[100px]">
-        <article className="max-w-[100%] min-h-[calc(100vh-105px)]">
+        <article className="max-w-[100%]">
           <React.Suspense fallback={<div>loading</div>}>
             <MDXContent components={mdxComponents} />
           </React.Suspense>

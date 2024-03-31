@@ -12,7 +12,7 @@ import Fluent2 from "@/images/microsoft-fluent-2.jpeg";
 import Geist from "@/images/vercel-geist.jpeg";
 import { DesignSystemCard } from "./templates/design-system-card";
 
-export const dynamic = 'force-static';
+export const dynamic = "force-static";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
                 A <span className={styles.highlight}>Design System</span> Framework
               </Text>
               <Text variant={["sub-hero", "heading-medium"]} className="mt-10">
-                Elevate Your Web Design: Build from Scratch or Build on top. BakaUI helps you build
+                Elevate Your Web Design: Build on top of the Material You Design System. BakaUI helps you build
                 faster and more consistent user experiences in your web apps.
               </Text>
               <div className="mt-10 flex flex-col gap-md items-center">

@@ -1,4 +1,4 @@
-export type BakaDesign = {
+export type BakaDesignCore = {
   AvatarVariant: string;
   AvatarState: {};
 
@@ -86,3 +86,5 @@ export type BakaDesign = {
   TextVariant: string;
   TextState: {};
 };
+
+export type BakaDesign = BakaDesignCore;

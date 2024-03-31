@@ -24,7 +24,7 @@ export default function Navigation() {
       <div>
         <BakaNavigationItem selected={true}>
           <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>
-          <BakaText>BakaText</BakaText>
+          <BakaText>Label</BakaText>
         </BakaNavigationItem>
         <BakaNavigationItem>
           <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>

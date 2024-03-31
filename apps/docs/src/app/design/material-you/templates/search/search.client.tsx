@@ -116,7 +116,7 @@ export const Search = (props: SearchProps) => {
   });
 
   const { onFocus, onBlur } = useAsyncFocusBlur({ onFocus: handleFocus, onBlur: handleBlur });
-
+  
   return (
     <>
       <TextField
@@ -126,7 +126,7 @@ export const Search = (props: SearchProps) => {
         onBlur={onBlur}
         onKeyDown={handleKeyDown}
         onClick={handleClick}
-        className={clsx(styles["responsive-search"], {
+        className={clsx(styles["responsive-search"],  {
           [styles["open"]]: state.open,
         })}
         focused={state.open}

@@ -9,6 +9,9 @@ import { Icon } from "@/components/misc/icon";
 import Link from "next/link";
 import { Button } from "@/components/buttons/button";
 import { ThemeToggle } from "../theme-toggle/theme-toggle.server";
+// @ts-expect-error
+import StorybookIcon from "@/icons/storybook.inline-svg";
+import { StorybookLink } from "../storybook-link";
 
 export type SidenavCategoryProp = {
   data: Array<{
@@ -25,11 +28,11 @@ export const SidenavCategory = (props: SidenavCategoryProp) => {
     <SidenavCategoryClient>
       <Navigation
         variant={"rail"}
-        className={clsx(other.className, "bg-surface-container z-20 hidden sm:flex")}
+        className={clsx(other.className, "bg-surface-container z-20 flex")}
         {...other}
       >
         <div className="flex items-center flex-col flex-1 justify-between">
-          <div className="flex items-center flex-col gap-2">
+          <div className="flex items-center flex-col overflow-auto gap-2">
             <ToggleButton className="xl:hidden">
               <Icon />
             </ToggleButton>
@@ -47,6 +50,12 @@ export const SidenavCategory = (props: SidenavCategoryProp) => {
                 url={group.docs?.[0].url}
               />
             ))}
+            <SidenavCategoryItem
+              as={StorybookLink}
+              icon={<StorybookIcon width={24} height={24} />}
+              title={"Storybook"}
+              href={"/storybook"}
+            />
           </div>
           <ThemeToggle />
         </div>
