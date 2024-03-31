@@ -1,4 +1,6 @@
-export interface BakaDesignMaterialYou {
+import { BakaDesignCore } from "baka-core/types";
+
+export interface BakaDesignMaterialYou extends BakaDesignCore {
   AvatarVariant: "small" | "medium" | "large";
   BadgeVariant: "small" | "single-digit" | "multi-digit";
   BarVariant: "top" | "bottom" | "small" | "medium" | "large" | "elevated";

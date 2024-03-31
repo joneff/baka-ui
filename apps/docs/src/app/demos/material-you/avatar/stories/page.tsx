@@ -1,8 +1,9 @@
+/// <reference types="baka-material-you" />
 import { BakaAvatar, BakaAvatarProps, BakaIcon } from "baka-ui";
 
 export type AvatarStoryProps = BakaAvatarProps & {
   type: "letter" | "icon" | "image";
-  children?: React.ReactNode;
+  children: React.ReactNode;
 };
 export const defaultProps: AvatarStoryProps = {
   type: "letter",
