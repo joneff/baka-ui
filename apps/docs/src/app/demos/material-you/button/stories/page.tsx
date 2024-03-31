@@ -1,7 +1,7 @@
 import { BakaButton, BakaButtonProps } from "baka-ui";
 
 export type ButtonStoryProps = BakaButtonProps & {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 };
 export const defaultProps: ButtonStoryProps = {
   hovered: false,
