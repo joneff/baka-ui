@@ -48,6 +48,7 @@ export interface BakaDesignMaterialYou extends BakaDesignCore {
     | "headline-large"
     | "headline-medium"
     | "headline-small"
+    | "title-large"
     | "title-medium"
     | "title-small"
     | "label-large"
