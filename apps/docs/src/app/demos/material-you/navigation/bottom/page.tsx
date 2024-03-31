@@ -2,7 +2,7 @@ import { BakaBadge, BakaNavigation, BakaNavigationItem, BakaIcon, BakaText } fro
 
 export default async function Demo() {
   return (
-    <BakaNavigation style={{ width: 400 }} variant="bottom">
+    <BakaNavigation style={{ width: 409 }} variant="bottom">
       <BakaNavigationItem selected={true}>
         <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>
       </BakaNavigationItem>

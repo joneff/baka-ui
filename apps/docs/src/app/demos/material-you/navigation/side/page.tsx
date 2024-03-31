@@ -17,17 +17,17 @@ export default async function () {
       </div>
       <BakaNavigationItem selected={true}>
         <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>
-        <BakaText>BakaText</BakaText>
+        <BakaText>Label</BakaText>
         <BakaText>100+</BakaText>
       </BakaNavigationItem>
       <BakaNavigationItem>
         <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>
-        <BakaText>BakaText</BakaText>
+        <BakaText>Label</BakaText>
         <BakaText>100+</BakaText>
       </BakaNavigationItem>
       <BakaNavigationItem>
         <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>
-        <BakaText>BakaText</BakaText>
+        <BakaText>Label</BakaText>
         <BakaText>100+</BakaText>
       </BakaNavigationItem>
       <BakaDivider />
@@ -36,15 +36,15 @@ export default async function () {
       </div>
       <BakaNavigationItem>
         <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>
-        <BakaText>BakaText</BakaText>
+        <BakaText>Label</BakaText>
       </BakaNavigationItem>
       <BakaNavigationItem>
         <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>
-        <BakaText>BakaText</BakaText>
+        <BakaText>Label</BakaText>
       </BakaNavigationItem>
       <BakaNavigationItem>
         <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>
-        <BakaText>BakaText</BakaText>
+        <BakaText>Label</BakaText>
       </BakaNavigationItem>
     </BakaNavigation>
   );

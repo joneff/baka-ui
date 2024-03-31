@@ -45,7 +45,7 @@ export interface BakaDesignMaterialYou extends BakaDesignCore {
     dragged?: boolean;
     selected?: boolean;
   };
-  ChipVariant: "elevated" | undefined;
+  ChipVariant: "elevated";
   CardVariant: "outlined" | "elevated" | "filled" | "horizontal";
   DialogVariant: "basic" | "full-screen";
   TextVariant:
