@@ -87,7 +87,6 @@ export const Basic: Story = {
     }
   },
   args: {
-    // @ts-expect-error - `normal` is the default value
     variant: "normal",
     configuration: "Label only",
     ...defaultArgs,

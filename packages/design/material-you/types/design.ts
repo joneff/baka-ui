@@ -38,7 +38,14 @@ export interface BakaDesignMaterialYou extends BakaDesignCore {
   };
   CheckboxVariant: "primary" | "error";
   BottomSheetVariant: "modal";
-  ChipVariant: "elevated";
+  ChipState: {
+    hovered?: boolean;
+    focused?: boolean;
+    activated?: boolean;
+    dragged?: boolean;
+    selected?: boolean;
+  };
+  ChipVariant: "elevated" | undefined;
   CardVariant: "outlined" | "elevated" | "filled" | "horizontal";
   DialogVariant: "basic" | "full-screen";
   TextVariant:
