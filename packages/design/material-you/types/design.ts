@@ -66,7 +66,16 @@ export interface BakaDesignMaterialYou extends BakaDesignCore {
     | "body-small";
   ListItemVariant: "multi-line" | "video";
   IconVariant: "primary" | "small" | "medium" | "large" | "filled" | "error";
+
+  SwitchState: {
+    checked?: boolean;
+    hovered?: boolean;
+    focused?: boolean;
+    activated?: boolean;
+    disabled?: boolean;
+  };
   SwitchVariant: "icon";
+
   ContainerVariant: "contained" | "fluid";
   ColumnVariant: "region-left" | "region-right";
 

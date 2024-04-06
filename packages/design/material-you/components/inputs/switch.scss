@@ -73,7 +73,7 @@
     }
 
     @include baka.disabled {
-      --border: color-mix(in srgb, var(--state) 0.12 * 100%, transparent);
+      --border: #{color-mix(in srgb, var(--state) 0.12 * 100%, transparent)};
       background: var(--disabled);
     }
 
@@ -111,9 +111,9 @@
 
       @include baka.disabled {
         outline-offset: 0;
-        --border: color-mix(in srgb, var(--state) 0.12 * 100%, transparent);
+        --border: #{color-mix(in srgb, var(--state) 0.12 * 100%, transparent)};
         --outline: #{map-get($swatch, on-primary)};
-        --disabled: color-mix(in srgb, var(--state) 0.12 * 100%, transparent);
+        --disabled: #{color-mix(in srgb, var(--state) 0.12 * 100%, transparent)};
 
         &::after {
           opacity: 0.38;

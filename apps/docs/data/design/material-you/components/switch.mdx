@@ -1,0 +1,42 @@
+---
+title: Switch
+---
+
+# Switch
+
+The `Switch` component is a simple wrapper around the native `<input type="checkbox">` element. It is used to toggle between two states.
+
+<Demo src="/demos/material-you/switch" />
+
+## Usage
+
+```jsx
+import { BakaSwitch } from "baka-ui";
+
+function App() {
+  return <BakaSwitch defaultChecked={true} />;
+}
+```
+
+## States
+
+The `Switch` component has the following states:
+
+- `checked`: Whether the switch is checked or not.
+- `hovered`: Whether the switch is hovered or not.
+- `focused`: Whether the switch is focused or not.
+- `activated`: Whether the switch is pressed or not.
+- `disabled`: Whether the switch is disabled or not.
+
+## Variants
+
+The `Switch` component has the following variants:
+
+- `normal`: The default variant.
+- `icon`: A variant that uses an icon inside the thumb.
+
+### Icon Variant
+
+The `icon` variant is used to display an icon inside the thumb.
+
+<Demo src="/demos/material-you/switch/icon" />
