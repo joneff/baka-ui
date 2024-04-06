@@ -1,0 +1,43 @@
+---
+title: Radio
+---
+
+# Radio
+
+The Radio component is a simple wrapper around the native `<input type="radio">` element. It is a part of the `@ionic/core` package and can be used to create radio buttons in your app.
+
+<Demo src="/demos/material-you/radio" style={{ height: 450 }} />
+
+## Basic Usage
+
+Radio buttons are used to select one option from a list. They are typically used in groups, where only one option can be selected at a time.
+
+```jsx
+import { BakaRadio } from "baka-ui";
+
+function MyComponent() {
+  return (
+    <>
+      <BakaRadio name="fruit" value="apple" />
+      <BakaRadio name="fruit" value="banana" />
+      <BakaRadio name="fruit" value="cherry" />
+    </>
+  );
+}
+```
+
+## State
+
+The Radio component support the following states:
+
+- `checked`: Whether the radio button is checked or not.
+- `hovered`: Whether the radio button is hovered or not.
+- `focused`: Whether the radio button is focused or not.
+- `activated`: Whether the radio button is pressed or not.
+- `disabled`: Whether the radio button is disabled or not.
+
+## Examples
+
+The following example demonstrates Radio component with labels:
+
+<Demo src="/demos/material-you/radio/labels" style={{ height: 500 }} />

@@ -6,6 +6,12 @@
     @include baka.text--styles;
     color: inherit;
 
+    &:is(label)[for],
+    &:has(input[type="checkbox"]),
+    &:has(input[type="radio"]) {
+      cursor: pointer;
+    }
+
     @include baka.variant(display-large) {
       @include display-large;
     }

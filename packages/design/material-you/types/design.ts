@@ -95,4 +95,12 @@ export interface BakaDesignMaterialYou extends BakaDesignCore {
     activated?: boolean;
     disabled?: boolean;
   };
+
+  RadioState: {
+    checked?: boolean;
+    hovered?: boolean;
+    focused?: boolean;
+    activated?: boolean;
+    disabled?: boolean;
+  };
 }
