@@ -1,0 +1,39 @@
+---
+title: Dialog
+---
+
+# Dialog
+
+The Dialog component is a simple way to create a modal dialog.
+
+<Demo src="/demos/material-you/dialog" style={{ height: 600 }} />
+
+### Basic Usage
+
+```jsx
+import { BakaDialog, BakaText } from "baka-ui";
+
+function MyComponent() {
+  return (
+    <BakaDialog>
+      <BakaText>Dialog Content</BakaText>
+    </BakaDialog>
+  );
+}
+```
+
+### Variants
+
+The Dialog components supports different variants.
+
+#### Basic
+
+The `basic` variant is the default variant.
+
+<Demo src="/demos/material-you/dialog" style={{ height: 600 }} />
+
+#### Fullscreen
+
+The `fullscreen` variant will make the dialog suitable for rendering as a fullscreen content.
+
+<Demo src="/demos/material-you/dialog/full-screen" style={{ height: 600 }} />
