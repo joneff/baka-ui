@@ -1,0 +1,32 @@
+---
+title: Divider
+---
+
+# Divider
+
+The `Divider` component is used to separate content in a list or a layout.
+
+<Demo src="/demos/material-you/divider" />
+
+### Usage
+
+```tsx
+import { BakaDivider } from "baka-ui";
+
+function MyComponent() {
+  return (
+    <BakaNavigation>
+      <BakaNavigationItem>{/* content */}</BakaNavigationItem>
+      <BakaNavigationItem>{/* content */}</BakaNavigationItem>
+      <BakaDivider />
+      <BakaNavigationItem>{/* content */}</BakaNavigationItem>
+    </BakaNavigation>
+  );
+}
+```
+
+### Examples
+
+#### Vertical Divider
+
+<Demo src="/demos/material-you/divider/vertical" style={{ height: 450 }} />
