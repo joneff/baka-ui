@@ -19,7 +19,7 @@ export default function Home() {
     <div className="pb-[100px]">
       <Container>
         <Row>
-          <Column count={4}>
+          <Column size={4}>
             <main className={"mt-40 w-[100%] text-center"}>
               <Text variant={"hero"} as="h1">
                 A <span className={styles.highlight}>Design System</span> Framework
@@ -57,22 +57,22 @@ export default function Home() {
             </Column>
           </Row>
           <Row className="mt-6">
-            <Column count={2}>
+            <Column size={2}>
               <DesignSystemCard released={true} href={"/design/material-you"}>
                 <Image src={MaterialYou} alt="Google Material You" />
               </DesignSystemCard>
             </Column>
-            <Column count={2}>
+            <Column size={2}>
               <DesignSystemCard>
                 <Image src={Fluent2} alt="Microsoft Fluent 2" />
               </DesignSystemCard>
             </Column>
-            <Column count={2}>
+            <Column size={2}>
               <DesignSystemCard>
                 <Image src={Geist} alt="Vercel Geist" />
               </DesignSystemCard>
             </Column>
-            <Column count={2}></Column>
+            <Column size={2}></Column>
           </Row>
         </Container>
       </div>

@@ -1,0 +1,92 @@
+---
+title: Layout
+---
+
+# Layout
+
+The Layout set of components include a `Container`, `Row`, and `Column` component that help you create responsive layouts in your web application. The `Container` component is a wrapper that centers its children horizontally and vertically. The `Row` and `Column` components are used to create an application layout with the Material Design's columns system.
+
+<Demo src="/demos/material-you/layout" />
+
+### Basic Usage
+
+You can create a layout using the `Container`, `Row`, and `Column` components by importing them from `baka-ui` and combining them to achieve the desired layout:
+
+```jsx
+import { BakaContainer, BakaRow, BakaColumn } from "baka-ui";
+
+function MyApp() {
+  return (
+    <BakaContainer>
+      <BakaRow>
+        <BakaColumn>Column 1</BakaColumn>
+        <BakaColumn>Column 2</BakaColumn>
+      </BakaRow>
+    </BakaContainer>
+  );
+}
+```
+
+### Setting column's count
+
+You can set the size of the columns by passing the `count` prop to the `BakaColumn` component. The `size` prop accepts a number between 1 and the max number of columns for the respective breakpoint.
+
+```jsx
+import { BakaContainer, BakaRow, BakaColumn } from "baka-ui";
+
+function MyApp() {
+  return (
+    <BakaContainer>
+      <BakaRow>
+        <BakaColumn size={3}>Column 1</BakaColumn>
+        <BakaColumn size={3}>Column 2</BakaColumn>
+        <BakaColumn size={3}>Column 3</BakaColumn>
+        <BakaColumn size={3}>Column 4</BakaColumn>
+      </BakaRow>
+    </BakaContainer>
+  );
+}
+```
+
+### Per breakpoint column size
+
+While the Material's design system's layout module is designed with a declining number of columns as the screen size decreases, you can manually set the size of the columns per breakpoint by passing an array to the `size` prop.
+
+> You can skip setting the size for a breakpoint by passing `null` to the array.
+
+```jsx
+import { BakaContainer, BakaRow, BakaColumn } from "baka-ui";
+
+function MyApp() {
+  return (
+    <BakaContainer>
+      <BakaRow>
+        <BakaColumn size={[null, 3, 4]}>Column 1</BakaColumn>
+        <BakaColumn size={[null, 3, 4]}>Column 2</BakaColumn>
+        <BakaColumn size={[null, 3, 4]}>Column 2</BakaColumn>
+        <BakaColumn size={[null, 3, 4]}>Column 2</BakaColumn>
+      </BakaRow>
+    </BakaContainer>
+  );
+}
+```
+
+### Variants
+
+The Material's Design System provides a single variant for the `Column` components: The `region-left` variant &mdash; intended to be used as a column for either a side-navigation or other navigation elements.
+
+```jsx
+function MyApp() {
+  return (
+    <main>
+      <BakaColumn variant="region-left">{/* side navigation: ... */}</BakaColumn>
+      <BakaContainer>
+        <BakaRow>
+          <BakaColumn size={9}>{/* content */}</BakaColumn>
+          <BakaColumn size={3}>{/* table of contents */}</BakaColumn>
+        </BakaRow>
+      </BakaContainer>
+    </main>
+  );
+}
+```

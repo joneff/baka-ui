@@ -13,7 +13,7 @@ export const Header = () => {
     <TopBar>
       <Container variant={"fluid"}>
         <Row>
-          <Column count={12} className="flex items-center justify-between">
+          <Column size={12} className="flex items-center justify-between">
             <div className="flex items-center gap-2 ml-[-24px]">
               <ToggleButton className="xl:hidden">
                 <Icon>menu</Icon>

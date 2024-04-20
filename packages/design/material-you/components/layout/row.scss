@@ -11,6 +11,7 @@
       $_margin: map-get($breakpoint, margin);
 
       display: flex;
+      flex-wrap: wrap;
 
       @media screen and (min-width: $_screen) {
         gap: $_gutter;

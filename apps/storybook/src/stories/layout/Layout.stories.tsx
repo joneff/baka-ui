@@ -33,7 +33,7 @@ export const Overview = {
         <BakaContainer>
           <BakaRow>
             {Array.from({ length: props.columns }).map((_, index) => (
-              <BakaColumn count={props.size} style={{ background: "#E0F0F0" }}></BakaColumn>
+              <BakaColumn size={props.size} style={{ background: "#E0F0F0" }}></BakaColumn>
             ))}
           </BakaRow>
         </BakaContainer>

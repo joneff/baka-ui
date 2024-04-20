@@ -85,7 +85,7 @@ export default function MaterialYouLayout({ children }: { children: React.ReactN
                   <div className="flex flex-col grow">
                     <Row className={"min-h-[72px] items-center"}>
                       <Column
-                        count={[4, 8, 10, 8, 8]}
+                        size={[4, 8, 8, 8, 8]}
                         className="items-center gap-3 sm:gap-0 justify-between relative"
                       >
                         <div className="flex items-center gap-3 ">
@@ -94,16 +94,16 @@ export default function MaterialYouLayout({ children }: { children: React.ReactN
                           </ToggleButton>
                           <Logo className="h-[30px] w-auto sm:hidden" height={33} />
                           {/* <Image
-                            src={Logo}
-                            alt="Baka UI"
-                            className="h-[30px] w-auto sm:hidden"
-                            width={400}
-                            height={33}
+                              src={Logo}
+                              alt="Baka UI"
+                              className="h-[30px] w-auto sm:hidden"
+                              width={400}
+                              height={33}
                           /> */}
                         </div>
                         <Search />
                       </Column>
-                      <Column count={[null, 2, 2, 4, 4]} className="gap-2 hidden md:flex">
+                      <Column size={[null, null, 2, 2, 4]} className="gap-2 hidden md:flex">
                         <Button
                           variant={"icon"}
                           as={Link}

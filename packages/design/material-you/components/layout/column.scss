@@ -14,33 +14,36 @@
       $_columns: map-get($breakpoint, columns);
       $_gutter: map-get($breakpoint, gutter);
       $_regions: map-get($breakpoint, regions);
-
+      $_fill: $_columns * $_gutter - $_gutter;
       flex-grow: 1;
 
       @if ($_screen == 0) {
         @for $i from 1 through $_columns {
+          $_offset: calc($_gutter * calc(calc($_columns / $i) - 1) / calc($_columns / $i));
           & {
-            width: calc(($i / $_columns) * 100% - $_gutter);
+            flex-basis: calc(($i / $_columns) * 100% - #{if($i == $_columns, 0px, $_offset)});
           }
           &.value--#{$i} {
             flex-grow: 0;
-            width: calc(($i / $_columns) * 100% - $_gutter);
+            flex-basis: calc(($i / $_columns) * 100% - #{if($i == $_columns, 0px, $_offset)});
           }
           &.value-0--#{$i} {
             flex-grow: 0;
-            width: calc(($i / $_columns) * 100% - $_gutter);
+            flex-basis: calc(($i / $_columns) * 100% - #{if($i == $_columns, 0px, $_offset)});
           }
         }
       } @else {
         @media screen and (min-width: $_screen) {
           @for $i from 1 through $_columns {
+            $_offset: calc($_gutter * calc(calc($_columns / $i) - 1) / calc($_columns / $i));
+
             &.value--#{$i} {
               flex-grow: 0;
-              width: calc(($i / $_columns) * 100% - $_gutter);
+              flex-basis: calc(($i / $_columns) * 100% - #{if($i == $_columns, 0px, $_offset)});
             }
             &.value-#{$j - 1}--#{$i} {
               flex-grow: 0;
-              width: calc(($i / $_columns) * 100% - $_gutter);
+              flex-basis: calc(($i / $_columns) * 100% - #{if($i == $_columns, 0px, $_offset)});
             }
           }
         }

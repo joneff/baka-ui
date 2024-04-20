@@ -23,7 +23,7 @@ export const Header = (props: HeaderProps) => {
       <TopBar as="header">
         <Container>
           <Row>
-            <Column count={12}>
+            <Column size={12}>
               <BakaIcon>{HeaderLogo}</BakaIcon>
               <ul className="ml-xl flex gap-sm">
                 <li>

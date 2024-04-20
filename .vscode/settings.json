@@ -15,5 +15,11 @@
     ],
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[mdx]": {
+        "diffEditor.wordWrap": "on"
+    },
+    "[markdown]": {
+        "diffEditor.wordWrap": "on"
     }
 }
