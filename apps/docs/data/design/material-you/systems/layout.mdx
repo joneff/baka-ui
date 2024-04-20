@@ -1,0 +1,51 @@
+---
+title: Layout
+position: 1
+---
+
+# Layout System
+
+The `baka-material-you` Layout System implements the Material You Design System layout. It creates a design principles that help you create responsive layouts in your web application.
+
+## Usage
+
+```scss
+@use "baka-material-you" as material-you;
+
+.my-element {
+  width: 100%;
+
+  @media screen and (min-width: map-get(map-get(material-you.$layout, sm), "screen")) {
+    max-width: 400px;
+  }
+
+  @media screen and (min-width: map-get(map-get(material-you.$layout, md), "screen")) {
+    width: calc(400px / map-get(map-get(material-you.$layout, md), "columns"));
+  }
+}
+```
+
+## Custom Layout
+
+You can create a custom layout by passing a custom `layout` variable.
+
+```scss
+$custom-layout: (
+  xxx-large: (
+    screen: 1920px,
+    width: 1600px,
+    columns: 16,
+    gutter: 32px,
+    margin: 48px,
+    regions: (
+      left: (
+        width: 380px,
+      ),
+    ),
+  ),
+);
+
+@use "baka-material-you" as material-you with (
+  $layout: $custom-layout
+);
+```

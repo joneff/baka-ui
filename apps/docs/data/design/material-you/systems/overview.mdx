@@ -1,0 +1,32 @@
+---
+title: Overview
+position: 0
+---
+
+# Material You Design System
+
+The `baka-material-you` package provides a set of `sass` mixins and variables for styling your application, the main ones being:
+
+- `styles` - A mixin that applies all of the Material You Design System styles.
+- `design--styles` - A mixin that applies only css variables for the corresponding theme.
+- `component--styles` - A mixin that applies only styles for the components.
+
+```scss
+@use "baka-material-you" as material-you;
+
+body {
+  @include material-you.styles();
+}
+```
+
+or alternatively:
+
+```scss
+@use "baka-material-you" as material-you;
+
+@include material-you.component--styles();
+
+:root {
+  @include material-you.design-styles();
+}
+```

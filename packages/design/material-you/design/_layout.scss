@@ -1,6 +1,8 @@
+@use "sass:map";
+@use "sass:meta";
 @use "baka-core" as baka;
 
-$layout: (
+$_default-layout: (
   xs: (
     screen: 0,
     width: 100%,
@@ -58,6 +60,29 @@ $layout: (
     ),
   ),
 );
+
+$layout: () !default;
+$layout: map-merge($_default-layout, $layout);
+$_layout: map-merge($layout, ());
+
+// @function assign($vars: (), $prefix: --) {
+//   @each $name, $value in $vars {
+//     @if (meta.type-of($value) == "map") {
+//       $result: assign($value, #{$prefix}--#{$name});
+//       $vars: map.set($vars, #{$name}, $result);
+//     } @else if (meta.type-of($value) == "list") {
+//       $result: assign($value, #{$prefix}--#{$name});
+//       $vars: map.set($vars, #{$name}, $result);
+//     } @else {
+//       $vars: map.set($vars, #{$name}, var(#{$prefix}--#{$name}, $value));
+//     }
+//   }
+//   @return $vars;
+// }
+
+// $layout: assign($layout, --layout);
+
+@debug $layout;
 
 @mixin layout--styles {
   @include baka.css-vars($layout, --layout);

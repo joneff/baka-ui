@@ -69,14 +69,14 @@ export default function MaterialYouPage(props: { params?: { slug?: string[] } })
 
   return (
     <>
-      <Column size={[8, 8, 8, 8, 10]} className="pt-[45px]  pb-[100px]">
+      <Column size={[8, 8, 8, 8]} className="pt-[45px]  pb-[100px]">
         <article className="w-[100%]">
           <React.Suspense fallback={<div>loading</div>}>
             <MDXContent components={mdxComponents} />
           </React.Suspense>
         </article>
       </Column>
-      <Column size={[4, 3, 2, 2]} className="hidden md:flex sticky top-[100px] h-[calc(100vh-100px)]">
+      <Column size={[4, 3, 2, 4]} className="hidden md:flex sticky top-[100px] h-[calc(100vh-100px)]">
         <TableOfContents data={doc.toc} />
       </Column>
     </>

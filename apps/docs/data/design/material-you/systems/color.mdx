@@ -1,40 +1,14 @@
 ---
-title: Color System
+title: Colors
+position: 1
 ---
 
 # Color System
 
 The `baka-material-you` Color System implements the Material You Design System swatch. It creates a pair of `sass` and `css` variables for usage in your application.
 
-## Usage
 
-The `baka-material-you` package provides a set of `sass` mixins and variables for styling your application, the main ones being:
-
-- `styles` - A mixin that applies all of the Material You Design System styles.
-- `design--styles` - A mixin that applies only css variables for the corresponding theme.
-- `component--styles` - A mixin that applies only styles for the components.
-
-```scss
-@use "baka-material-you" as material-you;
-
-body {
-  @include material-you.styles();
-}
-```
-
-or alternatively:
-
-```scss
-@use "baka-material-you" as material-you;
-
-@include material-you.component--styles();
-
-:root {
-  @include material-you.design-styles();
-}
-```
-
-### Styling Components
+## Styling Components
 
 You can utilize the `baka-material-you` Color System by importing the package and using the `$swatch` variable for any custom styles and components in your application.
 
@@ -56,7 +30,7 @@ This will result in the following CSS:
 }
 ```
 
-### Styling Layout
+## Styling Layout
 
 By utilizing the [Baka Tailwind Preset](/desing/material-you/tailwind), you can easily style your layout with the `baka-material-you` Color System.
 
