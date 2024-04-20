@@ -76,7 +76,7 @@ export default function MaterialYouPage(props: { params?: { slug?: string[] } })
           </React.Suspense>
         </article>
       </Column>
-      <Column count={[4, 3, 2]} className="hidden lg:flex sticky top-[100px] h-[calc(100%-100px)]">
+      <Column count={[4, 3, 2]} className="hidden md:flex sticky top-[100px] h-[calc(100%-100px)]">
         <TableOfContents data={doc.toc} />
       </Column>
     </>

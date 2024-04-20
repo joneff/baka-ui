@@ -85,7 +85,7 @@ export default function MaterialYouLayout({ children }: { children: React.ReactN
                   <div className="flex flex-col grow">
                     <Row className={"min-h-[72px] items-center"}>
                       <Column
-                        count={[4, 6, 10, 8, 8]}
+                        count={[4, 8, 10, 8, 8]}
                         className="items-center gap-3 sm:gap-0 justify-between relative"
                       >
                         <div className="flex items-center gap-3 ">

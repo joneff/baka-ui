@@ -23,16 +23,23 @@
             width: calc(($i / $_columns) * 100% - $_gutter);
           }
           &.value--#{$i} {
+            flex-grow: 0;
+            width: calc(($i / $_columns) * 100% - $_gutter);
+          }
+          &.value-0--#{$i} {
+            flex-grow: 0;
             width: calc(($i / $_columns) * 100% - $_gutter);
           }
         }
       } @else {
         @media screen and (min-width: $_screen) {
           @for $i from 1 through $_columns {
-            &.value-#{$j - 1}--#{$i} {
+            &.value--#{$i} {
+              flex-grow: 0;
               width: calc(($i / $_columns) * 100% - $_gutter);
             }
-            &.value--#{$i} {
+            &.value-#{$j - 1}--#{$i} {
+              flex-grow: 0;
               width: calc(($i / $_columns) * 100% - $_gutter);
             }
           }
