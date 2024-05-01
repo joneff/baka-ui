@@ -16,6 +16,15 @@ body {
   // @media screen and (prefers-color-scheme: dark) {
   //   @include dark-swatch.styles();
   // }
+
+
+  &:has(.container-high) {
+    background-color: map-get($swatch, surface-container-high);
+  }
+
+  &:has(.container-low) {
+    background-color: map-get($swatch, surface-container-low);
+  }
 }
 
 .root {

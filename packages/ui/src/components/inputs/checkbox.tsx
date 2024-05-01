@@ -31,6 +31,8 @@ export const BakaCheckbox: BakaCheckbox = (props) => {
   return (
     <Component
       ref={_ref}
+      readOnly={readOnly}
+      checked={checked}
       {...other}
       disabled={disabled}
       type="checkbox"

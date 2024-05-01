@@ -63,7 +63,8 @@ export interface BakaDesignMaterialYou extends BakaDesignCore {
     | "label-small"
     | "body-large"
     | "body-medium"
-    | "body-small";
+    | "body-small"
+    | "variant";
   ListItemVariant: "multi-line" | "video";
   IconVariant: "primary" | "small" | "medium" | "large" | "filled" | "error";
 

@@ -1,0 +1,92 @@
+---
+title: List
+---
+
+# List
+
+The `List` component is used to display a list of items in a vertial layout. It is typically used to display a collection of items, such as contacts, messages, or settings.
+
+<Demo src="/demos/material-you/list" style={{ height: 600 }} />
+
+### Usage
+
+```jsx
+import { BakaList, BakaListItem, BakaIcon, BakaText } from "baka-ui";
+
+// Inside your component
+<BakaList>
+  <BakaListItem>
+    <BakaIcon variant={"filled"}>fiber_manual_record</BakaIcon>
+    <BakaText>BakaText</BakaText>
+  </BakaListItem>
+</BakaList>;
+```
+
+## List items
+
+The `List` components contains a collection of `ListItem` components, each of which could be customized with an icon, text, and other elements.
+
+#### Basic
+
+The following example demonstrates the `List` component with a basic list item.
+
+<Demo src="/demos/material-you/list/list-item/basic" style={{ height: 600 }} />
+
+### Prefix & Suffix
+
+The `ListItem` could be customized with a prefix element, such as an icon or an avatar, and a suffix element, such as a icon or a checkbox.
+
+```jsx
+<BakaList>
+  <BakaListItem>
+    {/* Prefix */}
+    <BakaIcon>person</BakaIcon>
+    {/* Content */}
+    <BakaText>BakaText</BakaText>
+    {/* Suffix */}
+    <BakaCheckbox />
+  </BakaListItem>
+</BakaList>
+```
+
+#### With Avatar
+
+The following example demonstrates the `List` component with an avatar.
+
+<Demo src="/demos/material-you/list/list-item/with-avatar" style={{ height: 600 }} />
+
+#### With Icon
+
+The following example demonstrates the `List` component with an icon.
+
+<Demo src="/demos/material-you/list/list-item/with-icon" style={{ height: 600 }} />
+
+#### With Media
+
+The following example demonstrates the `List` component with media.
+
+<Demo src="/demos/material-you/list/list-item/with-media" style={{ height: 600 }} />
+
+#### Video Media
+
+In order to show a video media, one should additionally pass the `variant="video"` prop to the `ListItem`.
+
+<Demo src="/demos/material-you/list/list-item/with-video" style={{ height: 600 }} />
+
+#### With Checkbox
+
+The following example demonstrates the `List` component with a checkbox.
+
+<Demo src="/demos/material-you/list/list-item/with-checkbox" style={{ height: 600 }} />
+
+#### With Radio
+
+The following example demonstrates the `List` component with a radio button.
+
+<Demo src="/demos/material-you/list/list-item/with-radio" style={{ height: 600 }} />
+
+#### With Switch
+
+The following example demonstrates the `List` component with a switch.
+
+<Demo src="/demos/material-you/list/list-item/with-switch" style={{ height: 600 }} />
