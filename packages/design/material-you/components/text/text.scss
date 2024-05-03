@@ -5,6 +5,7 @@
   .baka-text {
     @include baka.text--styles;
     color: inherit;
+    cursor: inherit;
 
     &:is(label)[for],
     &:has(input[type="checkbox"]),
