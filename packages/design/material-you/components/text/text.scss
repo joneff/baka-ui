@@ -8,6 +8,7 @@
     cursor: inherit;
 
     &:is(label)[for],
+    &:is(a),
     &:has(input[type="checkbox"]),
     &:has(input[type="radio"]) {
       cursor: pointer;

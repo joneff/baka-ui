@@ -1,0 +1,78 @@
+---
+title: Text
+---
+
+# Text
+
+Text is a fundamental component in every Design System. It is used to communicate information to the user and is a key part of the user interface. Text can be used in a variety of ways, such as headings, body text, buttons, links, and more.
+
+<Demo src="/demos/material-you/text/" style={{ height: 1200 }} />
+
+## Usage
+
+```jsx
+import { BakaText } from "baka-ui";
+
+function MyApp() {
+  return (
+    <BakaText>
+      Hello, <em>Baka</em> UI!
+    </BakaText>
+  );
+}
+```
+
+## Variants
+
+Text can be styled in a variety of ways to convey different meanings or to create visual hierarchy. The following variants are available and are grouped into five categories: `display`, `headline`, `title`, `label`, and `body`.
+
+| Variant           | Specification                |
+| ----------------- | ---------------------------- |
+| `display-large`   | Roboto 57/64 -0.25           |
+| `display-medium`  | Roboto 45/52 . 0             |
+| `display-small`   | Roboto 36/44 . 0             |
+| `headline-large`  | Roboto 32/40 . 0             |
+| `headline-medium` | Roboto 28/368 . 0            |
+| `headline-small`  | Roboto 24/32 . 0             |
+| `title-large`     | Roboto Regular 22/28 . 0     |
+| `title-medium`    | Roboto Medium 16/24 . +0.15  |
+| `title-small`     | Roboto Medium 14/20 . +0.1   |
+| `label-large`     | Roboto Medium 14/20 . +0.1   |
+| `label-medium`    | Roboto Medium 12/16 . +0.5   |
+| `label-small`     | Roboto Medium 11/16 . +0.5   |
+| `body-large`      | Roboto Regular 16/24 . +0.5  |
+| `body-medium`     | Roboto Regular 14/20 . +0.25 |
+| `body-small`      | Roboto Regular 12/16 . +0.4  |
+
+## Color Variations
+
+In addition to the typography variants, the `Text` component also provides color variants through the `variant` property. Setting `variant={"variant"}` will apply the respective `on-variant` color to the text.
+
+```jsx
+import { BakaText } from "baka-ui";
+
+function MyApp() {
+  return <BakaText variant="variant">subtext</BakaText>;
+}
+```
+
+## Polymorphic Rendering
+
+The `Text` component is designed to work with **any** DOM element and allows for polymorphic rendering. The `Text` component can also be composed from multiple components like the `next/link`'s `Link` component, according to the application requirements.
+
+```jsx
+import { BakaText } from "baka-ui";
+
+function MyApp() {
+  return (
+    <>
+        <BakaText as="h1">
+        Hello, <em>Baka</em> UI!
+        </BakaText>
+        <BakaText as="a" href="www.baka-ui.com">
+        Learn more
+        </BakaText>
+    <>
+  );
+}
+```
