@@ -9,8 +9,6 @@ import Link from "next/link";
 import clsx from "clsx";
 import { stateClassNames } from "baka-ui";
 import { SIDENAV_ACTION, useSidenav } from "./sidenav.state";
-import { Icon } from "@/components/misc/icon";
-import { Button } from "@/components/buttons/button";
 import { Text } from "@/components/text";
 
 export type SidenavSubcategoryClientProps = {
@@ -42,10 +40,13 @@ export const SidenavSubcategoryClient = (props: SidenavSubcategoryClientProps) =
       {...other}
       className={clsx(
         "overflow-auto rounded-l-none w-full border-l border-outline-variant shadow-2 z-10 xl:block min-w-[255px]",
+        "opacity-0",
         {
-          //   ["min-w-[255px]"]: open,
           ["invisible"]: !open,
+          ["!opacity-100"]: open,
         },
+        "xl:visible",
+        "xl:opacity-100",
         other.className
       )}
     >
