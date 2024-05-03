@@ -17,7 +17,7 @@ export const Demo = (props: DemoProps) => {
     <BakaCard className="my-4" style={props.style}>
       <DemoState>
         <div className="bg-surface-container">
-          <BakaTabGroup variant={"secondary"}>
+          <BakaTabGroup variant={["secondary", "overflow"]}>
             <DemoTabClient value="demo">
               <BakaIcon>terminal</BakaIcon>
               <Text as="label">Demo</Text>

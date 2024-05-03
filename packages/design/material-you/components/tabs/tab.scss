@@ -16,7 +16,7 @@
     justify-content: center;
     align-items: center;
     white-space: nowrap;
-    flex: 0;
+    flex: 1;
     gap: var(--gap, 2px);
 
     @include ripple(var(--ripple), $scale: 10);
@@ -101,6 +101,12 @@
           }
         }
       }
+    }
+  }
+
+  :where(.baka-tab-group.variant--overflow) {
+    .baka-tab {
+      flex: 0;
     }
   }
 }

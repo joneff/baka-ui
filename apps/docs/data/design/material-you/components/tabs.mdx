@@ -1,0 +1,48 @@
+---
+title: Tabs
+---
+
+# Tabs
+
+Tabs make it easy to explore and switch between different views. They allow users to quickly move between a small number of equally important sections of their application.
+
+<Demo src="/demos/material-you/tabs" />
+
+## Usage
+
+```jsx
+import { BakaTabGroup, BakaTab, BakaText } from "baka-ui";
+
+function MyApp() {
+  return (
+    <BakaTabGroup>
+      <BakaTab>
+        <BakaText>Tab</BakaText>
+      </BakaTab>
+      <BakaTab>
+        <BakaText>Tab</BakaText>
+      </BakaTab>
+    </BakaTabGroup>
+  );
+}
+```
+
+## Variants
+
+The `BakaTabGroup` component supports two variants: `primary` and `secondary. Each variant could be also used with the `overflow` variant to allow horizontally scrollable tab group.
+
+### Primary
+
+The `primary` variant is destinguished by the coloring of all tab components in the `primary` color from the design system swatch. Additionally, it's constructive elements are positioned vertically.
+
+<Demo src="/demos/material-you/tabs/primary" />
+
+### Secondary 
+
+The `secondary` variant provides a subtler coloring of the tab components. It's constructive elements are positioned horizontally.
+
+<Demo src="/demos/material-you/tabs/secondary" />
+
+### Overflow
+
+<Demo src="/demos/material-you/tabs/overflow" />
