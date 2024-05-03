@@ -1,0 +1,31 @@
+---
+title: Icon
+---
+
+# Icon
+
+The `Icon` component is used to display an icon. It utilizes the [`Material Symbols`](https://fonts.google.com/icons) font to render the icon.
+
+<Demo src="/demos/material-you/icon" />
+
+## Usage
+
+```jsx
+import { BakaIcon } from "baka-ui";
+
+function MyComponent() {
+  return <BakaIcon>settings</BakaIcon>;
+}
+```
+
+## Variants
+
+The `Icon` component supports the following variants:
+
+- `primary` and `error` &mdash; for primary and error icons, respectively.
+- `small`, `medium`, and `large` &mdash; for sizing the icon.
+- `filled` &mdash; for filled icons.
+
+```jsx
+<BakaIcon variant={["primary", "large", "filled"]}>settings</BakaIcon>
+```
