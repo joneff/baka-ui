@@ -1,0 +1,37 @@
+---
+title: Tooltip
+---
+
+# Tooltip
+
+A tooltip is a small, informative message that appears when a user interacts with an element. Tooltips are typically used to provide additional context or information about an element.
+
+<Demo src="/demos/material-you/tooltip" style={{ height: 650 }} />
+
+## Usage
+
+```jsx
+import { BakaTooltip } from "baka-ui";
+
+function App() {
+  return <BakaTooltip>This is a tooltip</BakaTooltip>;
+}
+```
+
+## Variants
+
+The tooltip component comes in two variants: `plain` (default) and `rich`.
+
+### Plain
+
+The plain tooltip variant is a simple, text-only tooltip that is used to provide additional context or information about an element, usually when the user hovers over it.
+
+<Demo src="/demos/material-you/tooltip/plain" style={{ height: 300 }} />
+
+### Rich
+
+The rich tooltip variant is a more complex tooltip that can contain any arbitrary content, such as images, links, or other interactive elements. 
+
+The `BakTooltip` component does not render the content directly, but instead provides a `children` prop that allows you to render the content yourself.
+
+<Demo src="/demos/material-you/tooltip/rich" style={{ height: 400 }} />

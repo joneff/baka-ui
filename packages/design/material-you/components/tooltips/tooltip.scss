@@ -11,7 +11,7 @@
     align-self: flex-start;
     border-radius: 12px;
 
-    @include baka.variant(rich, true) {
+    @include baka.variant(rich) {
       box-shadow: map-get($elevation, 2);
       color: map-get($swatch, on-surface);
       background: map-get($swatch, surface-container);
@@ -19,7 +19,8 @@
       padding-bottom: 8px;
     }
 
-    @include baka.variant(plain) {
+    @include baka.variant(plain, true) {
+      width: fit-content;
       padding: 4px 8px;
       gap: 10px;
       border-radius: 4px;
