@@ -1,0 +1,37 @@
+---
+title: Menu
+---
+
+# Menu
+
+The `Menu` component displays a list of choices on temporary surfaces. It appears when users interact with a button, action, or other control.
+
+<Demo src="/demos/material-you/menu" style={{ height: 450 }} />
+
+## Usage
+
+```jsx
+import { BakaMenu, BakaMenuItem, BakaText } from "baka-ui";
+
+function MyApp() {
+  return (
+    <BakaMenu>
+      <BakaMenuItem>
+        <BakaText>Item 1</BakaText>
+      </BakaMenuItem>
+      <BakaMenuItem>
+        <BakaText>Item 2</BakaText>
+      </BakaMenuItem>
+      <BakaMenuItem>
+        <BakaText>Item 3</BakaText>
+      </BakaMenuItem>
+    </BakaMenu>
+  );
+}
+```
+
+### Menu Item
+
+The `MenuItem` component is used to display a single item in the `Menu`. It can be additionally composed of supporting components like an `Icon` or `Text`.
+
+<Demo src="/demos/material-you/menu/menu-item"/>

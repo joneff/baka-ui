@@ -4,12 +4,20 @@
 @mixin menu-item--styles {
   .baka-menu-item {
     @include baka.menu-item--styles;
+
     --state: #{map-get($swatch, on-surface)};
     --modifier: transparent;
     --ripple: #{map-get($swatch, on-surface)};
     min-height: 56px;
 
-    @include body-large;
+    &,
+    & .baka-text {
+      @include body-large;
+    }
+
+    .baka-text {
+      flex-grow: 1;
+    }
 
     gap: 12px;
     padding: 12px 24px 12px 16px;

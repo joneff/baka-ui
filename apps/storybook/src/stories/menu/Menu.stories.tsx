@@ -7,7 +7,6 @@ import {
   BakaText,
   BakaIcon,
   BakaInput,
-  BakaText,
   BakaTextField,
 } from "baka-ui";
 import type { Meta, StoryObj } from "@storybook/react";
