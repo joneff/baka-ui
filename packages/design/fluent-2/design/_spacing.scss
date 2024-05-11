@@ -1,0 +1,37 @@
+@use "sass:map";
+@use "baka-core" as baka;
+
+$_default-spacing: (
+  // vertical
+  vertical-none: 0,
+  vertical-xss: 2px,
+  vertical-xs: 4px,
+  vertical-s-nudge: 6px,
+  vertical-s: 8px,
+  vertical-m-nudge: 10px,
+  vertical-m: 12px,
+  vertical-l: 16px,
+  vertical-xl: 20px,
+  vertical-xxl: 24px,
+  vertical-xxxl: 32px,
+  // horizontal
+  horizontal-none: 0,
+  horizontal-xss: 2px,
+  horizontal-xs: 4px,
+  horizontal-s-nudge: 6px,
+  horizontal-s: 8px,
+  horizontal-m-nudge: 10px,
+  horizontal-m: 12px,
+  horizontal-l: 16px,
+  horizontal-xl: 20px,
+  horizontal-xxl: 24px,
+  horizontal-xxxl: 32px
+);
+
+$spacing: () !default;
+$spacing: map-merge($_default-spacing, $spacing);
+$_spacing: map-merge($spacing, ());
+
+@mixin spacing--styles($s: $spacing) {
+  @include baka.css-vars($spacing, --spacing);
+}

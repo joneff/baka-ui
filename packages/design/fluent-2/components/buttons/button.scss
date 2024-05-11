@@ -1,0 +1,9 @@
+@use "baka-core" as baka;
+@use "../../design" as *;
+
+@mixin button--styles {
+  .baka-button {
+    @include baka.button--styles;
+    
+  }
+}

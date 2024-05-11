@@ -1,0 +1,12 @@
+@use "baka-fluent-2" as *;
+
+body {
+  @include styles();
+}
+
+.root {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1rem;
+  max-height: 100%;
+}

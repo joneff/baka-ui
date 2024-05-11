@@ -82,8 +82,6 @@ $_layout: map-merge($layout, ());
 
 // $layout: assign($layout, --layout);
 
-@debug $layout;
-
 @mixin layout--styles {
   @include baka.css-vars($layout, --layout);
 }

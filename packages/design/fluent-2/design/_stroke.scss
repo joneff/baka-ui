@@ -1,0 +1,17 @@
+@use "sass:map";
+@use "baka-core" as baka;
+
+$_default-stroke: (
+  thin: 0,
+  thick: 2px,
+  thicker: 3px,
+  thickest: 4px,
+);
+
+$stroke: () !default;
+$stroke: map-merge($_default-stroke, $stroke);
+$_stroke: map-merge($stroke, ());
+
+@mixin stroke--styles($s: $stroke) {
+  @include baka.css-vars($stroke, --stroke);
+}

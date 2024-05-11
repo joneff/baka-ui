@@ -3,7 +3,6 @@
 @use "baka-core" as baka;
 
 @use "../colors" as *;
-@forward "../colors";
 
 $_default-swatch: (
   primary: map-get($royal-purple, 40),
