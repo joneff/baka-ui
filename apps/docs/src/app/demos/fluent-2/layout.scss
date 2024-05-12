@@ -1,7 +1,10 @@
+@use "sass:map";
 @use "baka-fluent-2" as *;
 
 body {
   @include styles();
+
+  background: map.get($swatch, neutral-background-2);
 }
 
 .root {

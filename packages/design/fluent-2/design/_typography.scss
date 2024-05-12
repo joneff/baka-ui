@@ -1,7 +1,13 @@
 $font-family: (
-  base: "'Segoe UI', 'Open Sans'",
-  monospace: "'Consolas', 'Courier",
-  numeric: "BahnSchrift",
+  base: (
+    Segoe UI,
+    Open Sans,
+  ),
+  monospace: (
+    Consolas,
+    Courier,
+  ),
+  numeric: BahnSchrift,
 ) !default;
 
 @mixin font-family($key) {
@@ -184,15 +190,15 @@ $font-weight: (
 
 @mixin typography--styles {
   @each $name, $value in $font-family {
-    @include font-family($name);
+    --typography--font-family--#{$name}: #{$value};
   }
   @each $name, $value in $font-size {
-    @include font-size($name);
+    --typography--font-size--#{$name}: #{$value};
   }
   @each $name, $value in $line-height {
-    @include line-height($name);
+    --typography--line-height--#{$name}: #{$value};
   }
   @each $name, $value in $font-weight {
-    @include font-weight($name);
+    --typography--font-weight--#{$name}: #{$value};
   }
 }
