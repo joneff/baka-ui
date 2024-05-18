@@ -1,6 +1,7 @@
 @use "sass:map";
 @use "baka-core" as baka;
 @use "../../design" as *;
+@use "../../common/focus.scss" as *;
 
 @mixin button--styles {
   .baka-button {
@@ -13,9 +14,9 @@
     gap: map.get($spacing, horizontal-xs);
 
     border-radius: map.get($radii, medium);
-    border-width: 1px;
-    border-style: solid;
-    border-color: var(--baka-button--border-color, transparent);
+    outline: 1px;
+    outline-style: solid;
+    outline-color: var(--baka-button--border-color, transparent);
 
     color: var(--baka-button--color);
     background-color: var(--baka-button--background-color);
@@ -23,7 +24,7 @@
 
     @include baka.hover {
       color: var(--baka-button--color--hover);
-      border-color: var(--baka-button--border-color--hover);
+      outline-color: var(--baka-button--border-color--hover);
       background-color: var(--baka-button--background-color-hover);
 
       .baka-icon {
@@ -33,7 +34,7 @@
 
     @include baka.active {
       color: var(--baka-button--color--pressed);
-      border-color: var(--baka-button--border-color--pressed);
+      outline-color: var(--baka-button--border-color--pressed);
       background-color: var(--baka-button--background-color-pressed);
 
       .baka-icon {
@@ -43,7 +44,7 @@
 
     @include baka.selected {
       color: var(--baka-button--color--selected);
-      border-color: var(--baka-button--border-color--selected);
+      outline-color: var(--baka-button--border-color--selected);
       background-color: var(--baka-button--background-color-selected);
 
       .baka-icon {
@@ -51,14 +52,13 @@
       }
     }
 
+    @include focus-indicator;
+
     @include baka.focus {
       outline-style: solid;
-      outline-width: 1px;
+      outline-width: 3px;
       outline-color: map.get($swatch, neutral-stroke-focus-1);
       outline-offset: -3px;
-
-      border-color: map.get($swatch, neutral-stroke-focus-2);
-      border-width: 2px;
     }
 
     @include baka.disabled {

@@ -1,0 +1,85 @@
+@use "../../design" as *;
+@use "baka-core" as baka;
+
+@mixin text--styles {
+  .baka-text {
+    @include baka.text--styles;
+    color: inherit;
+    cursor: inherit;
+
+    &:is(label)[for],
+    &:is(a),
+    &:has(input[type="checkbox"]),
+    &:has(input[type="radio"]) {
+      cursor: pointer;
+    }
+
+    @include baka.variant("caption-1") {
+      @include caption-1;
+    }
+
+    @include baka.variant("caption-1-strong") {
+      @include caption-1-strong;
+    }
+
+    @include baka.variant("caption-2") {
+      @include caption-2;
+    }
+
+    @include baka.variant("caption-2-strong") {
+      @include caption-2-strong;
+    }
+
+    @include baka.variant("body-1") {
+      @include body-1;
+    }
+
+    @include baka.variant("body-1-strong") {
+      @include body-1-strong;
+    }
+
+    @include baka.variant("body-1-stronger") {
+      @include body-1-stronger;
+    }
+
+    @include baka.variant("body-2") {
+      @include body-2;
+    }
+
+    @include baka.variant("subtitle-1") {
+      @include subtitle-1;
+    }
+
+    @include baka.variant("subtitle-1-stronger") {
+      @include subtitle-1-stronger;
+    }
+
+    @include baka.variant("subtitle-2") {
+      @include subtitle-2;
+    }
+
+    @include baka.variant("subtitle-2-stronger") {
+      @include subtitle-2-stronger;
+    }
+
+    @include baka.variant("title-3") {
+      @include title-3;
+    }
+
+    @include baka.variant("title-2") {
+      @include title-2;
+    }
+
+    @include baka.variant("title-1") {
+      @include title-1;
+    }
+
+    @include baka.variant("large-title") {
+      @include large-title;
+    }
+
+    @include baka.variant("display") {
+      @include display;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "sass:map";
+@use "baka-core" as baka;
+@use "../design" as *;
+
+@mixin focus-indicator {
+  position: relative;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include baka.focus($readonly: false) {
+    &::after {
+      border-width: 2px;
+      border-style: solid;
+      border-color: map.get($swatch, neutral-stroke-focus-2);
+      border-radius: 4px;
+    }
+  }
+}

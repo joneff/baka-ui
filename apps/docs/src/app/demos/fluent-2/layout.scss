@@ -5,6 +5,10 @@ body {
   @include styles();
 
   background: map.get($swatch, neutral-background-2);
+
+  &:has(.background-3) {
+    background: map.get($swatch, neutral-background-3);
+  }
 }
 
 .root {
