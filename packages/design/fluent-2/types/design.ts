@@ -2,6 +2,7 @@ import { BakaDesignCore } from "baka-core/types";
 
 export interface BakaDesignFluent2 extends BakaDesignCore {
   BadgeVariant:
+    | "circular"
     | "filled"
     | "tint"
     | "outline"

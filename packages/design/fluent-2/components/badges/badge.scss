@@ -27,6 +27,10 @@
       padding: 0 map.get($spacing, horizontal-xs);
     }
 
+    @include baka.variant("circular") {
+      border-radius: map.get($radii, circle);
+    }
+
     @include baka.variant("filled", true) {
       color: var(--text);
       background-color: var(--bg);
