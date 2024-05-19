@@ -7,16 +7,6 @@
     @include baka.badge--styles;
     @include caption-1-strong;
 
-    --bg: #{map.get($swatch, brand-background-1)};
-    --bg-tint: #{map.get($swatch, brand-background-2)};
-
-    --border: #{map.get($swatch, brand-background-1)};
-    --border-tint: #{map.get($swatch, brand-stroke-2)};
-
-    --text: #{map.get($swatch, neutral-foreground-on-brand)};
-    --text-tint: #{map.get($swatch, brand-foreground-2)};
-    --text-alt: #{map.get($swatch, brand-foreground-1)};
-
     flex-direction: row;
     box-sizing: border-box;
 
@@ -59,6 +49,18 @@
       color: var(--text-alt);
       background-color: transparent;
       outline-color: transparent;
+    }
+
+    @include baka.variant("color-brand", true) {
+      --bg: #{map.get($swatch, brand-background-1)};
+      --bg-tint: #{map.get($swatch, brand-background-2)};
+
+      --border: #{map.get($swatch, brand-background-1)};
+      --border-tint: #{map.get($swatch, brand-stroke-2)};
+
+      --text: #{map.get($swatch, neutral-foreground-on-brand)};
+      --text-tint: #{map.get($swatch, brand-foreground-2)};
+      --text-alt: #{map.get($swatch, brand-foreground-1)};
     }
 
     @include baka.variant("color-danger") {
