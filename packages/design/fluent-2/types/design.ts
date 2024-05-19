@@ -1,6 +1,18 @@
 import { BakaDesignCore } from "baka-core/types";
 
 export interface BakaDesignFluent2 extends BakaDesignCore {
+  BadgeVariant:
+    | "filled"
+    | "tint"
+    | "outline"
+    | "subtle"
+    | "color-brand"
+    | "color-danger"
+    | "color-warning"
+    | "color-success"
+    | "color-important"
+    | "color-informative"
+    | "color-subtle";
   ButtonVariant: "primary" | "secondary" | "outline" | "subtle" | "transparent" | "icon";
   ButtonState: {
     hovered?: boolean;
