@@ -1,4 +1,4 @@
-// @forward "./avatars/avatar.scss";
+@forward "./avatars/avatar.scss";
 @forward "./badges/badge.scss";
 // @forward "./bars/bar.scss";
 @forward "./buttons/button.scss";
@@ -27,7 +27,7 @@
 // @forward "./layout/column.scss";
 // @forward "./layout/row.scss";
 
-// @use "./avatars/avatar.scss" as *;
+@use "./avatars/avatar.scss" as *;
 @use "./badges/badge.scss" as *;
 // @use "./bars/bar.scss" as *;
 @use "./buttons/button.scss" as *;
@@ -57,7 +57,7 @@
 // @use "./layout/row.scss" as *;
 
 @mixin component--styles {
-  //   @include avatar--styles();
+    @include avatar--styles();
     @include badge--styles();
   //   @include bar--styles();
   @include button--styles();

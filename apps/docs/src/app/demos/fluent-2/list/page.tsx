@@ -4,7 +4,7 @@ export default function ListDemo() {
   return (
     <div className="background-3">
       <BakaList style={{ width: 269 }}>
-        <BakaListItem>
+        <BakaListItem tabIndex={1}>
           <BakaIcon></BakaIcon>
           <BakaText variant="subtitle-2">Favorites</BakaText>
           <BakaBadge variant={"subtle"}>15</BakaBadge>

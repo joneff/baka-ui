@@ -1,6 +1,51 @@
 import { BakaDesignCore } from "baka-core/types";
 
 export interface BakaDesignFluent2 extends BakaDesignCore {
+  AvatarVariant:
+    | "size-16"
+    | "size-20"
+    | "size-24"
+    | "size-28"
+    | "size-32"
+    | "size-40"
+    | "size-48"
+    | "size-56"
+    | "size-64"
+    | "size-72"
+    | "size-96"
+    | "size-120"
+    | "neutral"
+    | "brand"
+    | "darkred"
+    | "cranberry"
+    | "red"
+    | "pumpkin"
+    | "peach"
+    | "marigold"
+    | "gold"
+    | "brass"
+    | "brown"
+    | "forest"
+    | "seafoam"
+    | "darkgreen"
+    | "lightteal"
+    | "teal"
+    | "steel"
+    | "blue"
+    | "royalroyal"
+    | "cornflower"
+    | "navy"
+    | "lavender"
+    | "purple"
+    | "grape"
+    | "lilac"
+    | "pink"
+    | "magenta"
+    | "plum"
+    | "beige"
+    | "mink"
+    | "platinum"
+    | "anchor";
   BadgeVariant:
     | "circular"
     | "filled"
@@ -43,4 +88,6 @@ export interface BakaDesignFluent2 extends BakaDesignCore {
   ListItemState: {
     focused?: boolean;
   };
+
+  IconVariant: "size-12" | "size-16" | "size-20" | "size-24" | "size-28" | "size-32" | "size-48";
 }
