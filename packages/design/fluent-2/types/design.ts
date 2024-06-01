@@ -67,6 +67,12 @@ export interface BakaDesignFluent2 extends BakaDesignCore {
     disabled?: boolean;
     selected?: boolean;
   };
+  CardVariant: "filled" | "filled-alt" | "outline" | "subtle";
+  CardState: {
+    activated?: boolean;
+    hovered?: boolean;
+    selected?: boolean;
+  };
   TextVariant:
     | "caption-1"
     | "caption-1-strong"

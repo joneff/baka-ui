@@ -2,7 +2,7 @@
 @forward "./badges/badge.scss";
 // @forward "./bars/bar.scss";
 @forward "./buttons/button.scss";
-// @forward "./cards/card.scss";
+@forward "./cards/card.scss";
 // @forward "./chips/chip.scss";
 // @forward "./dialogs/dialog.scss";
 // @forward "./dividers/divider.scss";
@@ -31,7 +31,7 @@
 @use "./badges/badge.scss" as *;
 // @use "./bars/bar.scss" as *;
 @use "./buttons/button.scss" as *;
-// @use "./cards/card.scss" as *;
+@use "./cards/card.scss" as *;
 // @use "./chips/chip.scss" as *;
 // @use "./dialogs/dialog.scss" as *;
 // @use "./dividers/divider.scss" as *;
@@ -57,11 +57,11 @@
 // @use "./layout/row.scss" as *;
 
 @mixin component--styles {
-    @include avatar--styles();
-    @include badge--styles();
+  @include avatar--styles();
+  @include badge--styles();
   //   @include bar--styles();
   @include button--styles();
-  //   @include card--styles();
+  @include card--styles();
   //   @include chip--styles();
   //   @include dialog--styles();
   //   @include divider--styles();
