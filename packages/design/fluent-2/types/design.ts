@@ -73,6 +73,17 @@ export interface BakaDesignFluent2 extends BakaDesignCore {
     hovered?: boolean;
     selected?: boolean;
   };
+  CheckboxState: {
+    activated?: boolean;
+    hovered?: boolean;
+    focused?: boolean;
+  };
+  TextState: {
+    disabled?: boolean;
+    hovered?: boolean;
+    focused?: boolean;
+    activated?: boolean;
+  };
   TextVariant:
     | "caption-1"
     | "caption-1-strong"

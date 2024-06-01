@@ -1,17 +1,53 @@
+@use "sass:map";
 @use "../../design" as *;
 @use "baka-core" as baka;
+@use "../../common/focus.scss" as *;
 
 @mixin text--styles {
   .baka-text {
     @include baka.text--styles;
-    color: inherit;
+    color: var(--text-color, inherit);
     cursor: inherit;
 
-    &:is(label)[for],
+    &:is(label),
     &:is(a),
     &:has(input[type="checkbox"]),
     &:has(input[type="radio"]) {
       cursor: pointer;
+    }
+
+    &:is(label) {
+      display: inline-flex;
+      align-items: center;
+      gap: map.get($spacing, horizontal-xs);
+    }
+
+    &:has(> .baka-checkbox) {
+      --text-color: #{map.get($swatch, neutral-foreground-3)};
+
+      @include baka.hover {
+        --text-color: #{map.get($swatch, neutral-foreground-2)};
+      }
+
+      @include baka.active {
+        --text-color: #{map.get($swatch, neutral-foreground-1)};
+      }
+
+      @include baka.focus {
+        outline: none;
+        @include focus-indicator;
+      }
+    }
+
+    &:has(> .baka-checkbox.baka-state--checked),
+    &:has(> .baka-checkbox:checked) {
+      --text-color: #{map.get($swatch, neutral-foreground-1)};
+    }
+
+    &:has(> .baka-checkbox.baka-state--disabled),
+    &:has(> .baka-checkbox:disabled) {
+      pointer-events: none;
+      --text-color: #{map.get($swatch, neutral-foreground-disabled)};
     }
 
     @include baka.variant("caption-1") {

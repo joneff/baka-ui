@@ -17,12 +17,12 @@
     } @else {
       @if ($global) {
         &,
-        &:global(.variant--#{$variant}) {
+        &:global(.variant--#{"" + $variant}) {
           @content;
         }
       } @else {
         &,
-        &.variant--#{$variant} {
+        &.variant--#{"" + $variant} {
           @content;
         }
       }
@@ -40,11 +40,11 @@
       }
     } @else {
       @if ($global) {
-        &:global(.variant--#{$variant}) {
+        &:global(.variant--#{"" + $variant}) {
           @content;
         }
       } @else {
-        &.variant--#{$variant} {
+        &.variant--#{"" + $variant} {
           @content;
         }
       }
