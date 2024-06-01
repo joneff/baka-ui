@@ -77,7 +77,10 @@ export interface BakaDesignFluent2 extends BakaDesignCore {
     activated?: boolean;
     hovered?: boolean;
     focused?: boolean;
+    checked?: boolean;
+    indeterminate?: boolean;
   };
+  CheckboxVariant: "circular";
   TextState: {
     disabled?: boolean;
     hovered?: boolean;
