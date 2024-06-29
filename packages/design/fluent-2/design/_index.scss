@@ -1,0 +1,22 @@
+@forward "./swatch";
+@forward "./radii";
+@forward "./spacing";
+@forward "./stroke";
+@forward "./elevation";
+@forward "./typography";
+
+@use "./swatch" as *;
+@use "./radii" as *;
+@use "./spacing" as *;
+@use "./stroke" as *;
+@use "./elevation" as *;
+@use "./typography" as *;
+
+@mixin design--styles {
+  @include swatch--styles;
+  @include radii--styles;
+  @include spacing--styles;
+  @include stroke--styles;
+  @include elevation--styles;
+  @include typography--styles;
+}

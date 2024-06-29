@@ -1,0 +1,204 @@
+$font-family: (
+  base: (
+    Segoe UI,
+    Open Sans,
+  ),
+  monospace: (
+    Consolas,
+    Courier,
+  ),
+  numeric: BahnSchrift,
+) !default;
+
+@mixin font-family($key) {
+  @if (map-has-key($font-family, $key)) {
+    font-family: var(--typography--font-family--#{$key}, map-get($font-family, $key));
+  }
+}
+
+$font-size: (
+  100: 10px,
+  200: 12px,
+  300: 14px,
+  400: 16px,
+  500: 20px,
+  600: 24px,
+  700: 28px,
+  800: 32px,
+  900: 40px,
+  1000: 68px,
+);
+
+@mixin font-size($key) {
+  @if (map-has-key($font-size, $key)) {
+    font-size: var(--typography--font-size--#{$key}, map-get($font-size, $key));
+  }
+}
+
+$line-height: (
+  100: 14px,
+  200: 16px,
+  300: 20px,
+  400: 22px,
+  500: 28px,
+  600: 32px,
+  700: 36px,
+  800: 40px,
+  900: 52px,
+  1000: 92px,
+);
+
+@mixin line-height($key) {
+  @if (map-has-key($line-height, $key)) {
+    line-height: var(--typography--line-height--#{$key}, map-get($line-height, $key));
+  }
+}
+
+$font-weight: (
+  light: null,
+  semilight: null,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+);
+
+@mixin font-weight($key) {
+  @if (map-has-key($font-weight, $key)) {
+    font-weight: var(--typography--font-weight--#{$key}, map-get($font-weight, $key));
+  }
+}
+
+@mixin caption-1 {
+  @include font-family(base);
+  @include font-size(200);
+  @include line-height(200);
+  @include font-weight(regular);
+}
+
+@mixin caption-1-strong {
+  @include font-family(base);
+  @include font-size(200);
+  @include line-height(200);
+  @include font-weight(semibold);
+}
+
+@mixin caption-2 {
+  @include font-family(base);
+  @include font-size(100);
+  @include line-height(100);
+  @include font-weight(regular);
+}
+
+@mixin caption-2-strong {
+  @include font-family(base);
+  @include font-size(100);
+  @include line-height(100);
+  @include font-weight(semibold);
+}
+
+@mixin body-1 {
+  @include font-family(base);
+  @include font-size(300);
+  @include line-height(300);
+  @include font-weight(regular);
+}
+
+@mixin body-1-strong {
+  @include font-family(base);
+  @include font-size(300);
+  @include line-height(300);
+  @include font-weight(semibold);
+}
+
+@mixin body-1-stronger {
+  @include font-family(base);
+  @include font-size(300);
+  @include line-height(300);
+  @include font-weight(bold);
+}
+
+@mixin body-2 {
+  @include font-family(base);
+  @include font-size(400);
+  @include line-height(400);
+  @include font-weight(regular);
+}
+
+@mixin subtitle-1 {
+  @include font-family(base);
+  @include font-size(500);
+  @include line-height(500);
+  @include font-weight(semibold);
+}
+
+@mixin subtitle-1-stronger {
+  @include font-family(base);
+  @include font-size(500);
+  @include line-height(500);
+  @include font-weight(bold);
+}
+
+@mixin subtitle-2 {
+  @include font-family(base);
+  @include font-size(400);
+  @include line-height(400);
+  @include font-weight(semibold);
+}
+
+@mixin subtitle-2-stronger {
+  @include font-family(base);
+  @include font-size(400);
+  @include line-height(400);
+  @include font-weight(bold);
+}
+
+@mixin title-3 {
+  @include font-family(base);
+  @include font-size(600);
+  @include line-height(600);
+  @include font-weight(semibold);
+}
+
+@mixin title-2 {
+  @include font-family(base);
+  @include font-size(700);
+  @include line-height(700);
+  @include font-weight(semibold);
+}
+
+@mixin title-1 {
+  @include font-family(base);
+  @include font-size(800);
+  @include line-height(800);
+  @include font-weight(semibold);
+}
+
+@mixin large-title {
+  @include font-family(base);
+  @include font-size(900);
+  @include line-height(900);
+  @include font-weight(semibold);
+}
+
+@mixin display {
+  @include font-family(base);
+  @include font-size(1000);
+  @include line-height(1000);
+  @include font-weight(semibold);
+}
+
+@mixin typography--styles {
+  @each $name, $value in $font-family {
+    --typography--font-family--#{$name}: #{$value};
+  }
+  @each $name, $value in $font-size {
+    --typography--font-size--#{$name}: #{$value};
+  }
+  @each $name, $value in $line-height {
+    --typography--line-height--#{$name}: #{$value};
+  }
+  @each $name, $value in $font-weight {
+    --typography--font-weight--#{$name}: #{$value};
+  }
+}

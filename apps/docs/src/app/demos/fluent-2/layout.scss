@@ -1,0 +1,19 @@
+@use "sass:map";
+@use "baka-fluent-2" as *;
+
+body {
+  @include styles();
+
+  background: map.get($swatch, neutral-background-2);
+
+  &:has(.background-3) {
+    background: map.get($swatch, neutral-background-3);
+  }
+}
+
+.root {
+  box-sizing: border-box;
+  margin: auto;
+  padding: 1rem;
+  max-height: 100%;
+}

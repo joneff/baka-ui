@@ -1,9 +1,9 @@
 @mixin icon--styles {
+  box-sizing: border-box;
   display: inline-flex;
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
-  box-sizing: border-box;
   font-feature-settings: "liga";
   -webkit-font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;

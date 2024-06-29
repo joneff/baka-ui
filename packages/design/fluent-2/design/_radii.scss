@@ -1,0 +1,23 @@
+@use "sass:map";
+@use "baka-core" as baka;
+
+$_default_radii: (
+  none: 0,
+  small: 2px,
+  medium: 4px,
+  large: 6px,
+  x-large: 8px,
+  circle: 99px,
+);
+
+$radii: () !default;
+$radii: map-merge($_default-radii, $radii);
+$_radii: map-merge($radii, ());
+
+@each $name, $value in $radii {
+  $radii: map.merge($radii, (#{$name}: var(--radii--#{$name}, $value)));
+}
+
+@mixin radii--styles($r: $_radii) {
+  @include baka.css-vars($radii, --radii);
+}
