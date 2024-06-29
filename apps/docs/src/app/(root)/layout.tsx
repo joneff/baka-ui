@@ -22,6 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={styles["katana"]}>
       <head>
         <link rel="icon" href={favicon.src} />
+        <meta property="og:image" content="/og-image.png" />
       </head>
       <body className={clsx(GeistSans.variable, GeistMono.variable)} id="katana">
         <Header />
