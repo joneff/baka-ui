@@ -39,7 +39,7 @@ export const SidenavSubcategoryClient = (props: SidenavSubcategoryClientProps) =
     <NavigationDrawer
       {...other}
       className={clsx(
-        "overflow-auto rounded-l-none w-full border-l border-outline-variant shadow-2 z-10 xl:block min-w-[255px]",
+        "overflow-auto rounded-l-none w-full border-l-0 border-outline-variant border-solid shadow-2 z-10 xl:block min-w-[255px]",
         "opacity-0",
         {
           ["invisible"]: !open,
