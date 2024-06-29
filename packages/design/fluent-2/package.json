@@ -1,31 +1,30 @@
 {
-    "name": "baka-fluent-2",
-    "homepage": "https://baka-ui.com",
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/kspeyanski/baka"
-    },
-    "version": "0.1.0-alpha.0",
-    "types": "./types/index.d.ts",
-    "main": "./_index.scss",
-    "sass": "./_index.scss",
-    "files": [
-      "dist",
-      "types"
-    ],
-    "license": "MIT",
-    "scripts": {
-      "build": "sass --load-path=./node_modules ./_index.scss ./dist/index.css",
-      "watch": "sass --watch --load-path=./node_modules ./_index.scss ./dist/index.css"
-    },
-    "devDependencies": {
-      "baka-core": "workspace:*",
-      "sass": "^1.68.0",
-      "tailwindcss": "^3.3.5"
-    },
-    "peerDependencies": {
-      "baka-core": "workspace:*"
-    },
-    "gitHead": "532e6985e8208e2dc614d825bcb0cf81b579f331"
-  }
-  
+  "name": "baka-fluent-2",
+  "homepage": "https://baka-ui.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kspeyanski/baka"
+  },
+  "version": "0.1.1-alpha.0",
+  "types": "./types/index.d.ts",
+  "main": "./_index.scss",
+  "sass": "./_index.scss",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "sass --load-path=./node_modules ./_index.scss ./dist/index.css",
+    "watch": "sass --watch --load-path=./node_modules ./_index.scss ./dist/index.css"
+  },
+  "devDependencies": {
+    "baka-core": "workspace:*",
+    "sass": "^1.68.0",
+    "tailwindcss": "^3.3.5"
+  },
+  "peerDependencies": {
+    "baka-core": "workspace:*"
+  },
+  "gitHead": "532e6985e8208e2dc614d825bcb0cf81b579f331"
+}
