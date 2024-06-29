@@ -15,7 +15,7 @@
     "build-packages": "lerna run build --no-private",
     "build-storybook": "build-storybook -c .storybook -o .out",
     "prepare": "node ./scripts/prepare.mjs",
-    "prepublish": "lerna run build-packages"
+    "prepublish": "lerna run build --no-private"
   },
   "devDependencies": {
     "eslint": "^8.53.0",
