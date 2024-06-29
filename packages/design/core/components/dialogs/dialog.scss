@@ -1,5 +1,6 @@
 @mixin dialog--styles {
   position: relative;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
