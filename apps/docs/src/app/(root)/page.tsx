@@ -29,14 +29,23 @@ export default function Home() {
                 faster and more consistent user experiences in your web apps.
               </Text>
               <div className="mt-10 flex flex-col gap-md items-center">
-                <div className="flex gap-sm justify-center">
+                <div className="flex gap-lg justify-center">
                   <Button
                     variant="cta"
                     as={Link}
-                    target="_blank"
-                    href="https://github.com/kspeyanski/baka"
+                    className="w-[137px]"
+                    href="design/material-you"
                   >
                     Explore
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    as={Link}
+                    target="_blank"
+                    className="w-[137px]"
+                    href="https://github.com/kspeyanski/baka"
+                  >
+                    Source Code
                   </Button>
                 </div>
                 <div>
