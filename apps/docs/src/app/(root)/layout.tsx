@@ -22,7 +22,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={styles["katana"]}>
       <head>
         <link rel="icon" href={favicon.src} />
-        <meta property="og:image" content="/og-image.png" />
+        
+        <meta property="og:url" content="https://www.baka-ui.com/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Baka UI" />
+        <meta property="og:description" content="A Design System Framework" />
+        <meta property="og:image" content="https://baka-ui.com/og-image.png" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="baka-ui.com" />
+        <meta property="twitter:url" content="https://www.baka-ui.com/" />
+        <meta name="twitter:title" content="Baka UI" />
+        <meta name="twitter:description" content="A Design System Framework" />
+        <meta name="twitter:image" content="https://baka-ui.com/og-image.png" />
       </head>
       <body className={clsx(GeistSans.variable, GeistMono.variable)} id="katana">
         <Header />
