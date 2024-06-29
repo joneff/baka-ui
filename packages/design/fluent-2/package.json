@@ -1,6 +1,7 @@
 {
   "name": "baka-fluent-2",
   "homepage": "https://baka-ui.com",
+  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/kspeyanski/baka"

@@ -1,6 +1,7 @@
 {
   "name": "eslint-config-baka",
   "version": "0.0.10-alpha.0",
+  "private": true,
   "devDependencies": {
     "eslint": "^8",
     "eslint-config-prettier": "^8"
